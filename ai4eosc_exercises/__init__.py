@@ -18,46 +18,20 @@ logger = logging.getLogger(__name__)
 logger.setLevel(config.LOG_LEVEL)
 
 
-# TODO: warm (Start Up)
-# = HAVE TO MODIFY FOR YOUR NEEDS =
 def warm(**kwargs):
     """Main/public method to start up the model
     """
-    # if necessary, start the model
     pass
 
 
-# TODO: predict
-# = HAVE TO MODIFY FOR YOUR NEEDS =
 def predict(model_name, input_file, **options):
     """Main/public method to perform prediction
     """
-    # if necessary, preprocess data
-    
-    # choose AI model, load weights
-    
-    # return results of prediction
-    predict_result = {'result': 'not implemented'}
-    logger.debug(f"[predict()]: {predict_result}")
-
+    predict_result = [x for x in range(100)]
     return predict_result
 
-# TODO: train
-# = HAVE TO MODIFY FOR YOUR NEEDS =
 def train(model_name, input_file, **options):
     """Main/public method to perform training
     """
-    # prepare the dataset, e.g.
-    # dtst.mkdata()
-    
-    # create model, e.g.
-    # create_model()
-    
-    # train model
-    # describe training steps
-
-    # return training results
     train_result = {'result': 'not implemented'}
-    logger.debug(f"[train()]: {train_result}")
-    
     return train_result
