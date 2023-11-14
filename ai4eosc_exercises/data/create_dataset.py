@@ -23,7 +23,7 @@ parser.add_argument(
 )
 parser.add_argument(
     "output",
-    help="Output folder for skimmed files (default: %(default)s)",
+    help="Output folder for files (default: %(default)s)",
     type=pathlib.Path,
 )
 
