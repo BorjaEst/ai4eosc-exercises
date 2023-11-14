@@ -44,14 +44,14 @@ from deepaas.model.v2.wrapper import UploadedFile
 import api
 
 
-@pytest.fixture(scope="module", params=["t100-images.npy"])
+@pytest.fixture(scope="module", params=["test_dataset_1.txt"])
 def input_file(request):
     """Fixture to provide the input_file argument to api.predict."""
     filepath = f"{api.config.DATA_PATH}"
     return UploadedFile("", filename=f"{filepath}/{request.param}")
 
 
-@pytest.fixture(scope="module", params=["test_simplemodel"])
+@pytest.fixture(scope="module", params=["dummy_model"])
 def model_name(request):
     """Fixture to provide the model_name argument to api.predict."""
     return request.param

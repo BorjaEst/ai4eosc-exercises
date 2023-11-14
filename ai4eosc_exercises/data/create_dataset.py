@@ -39,7 +39,7 @@ def _run_command(output, **options):
 
     # Store values in a txt file
     with open(output, "w") as file:
-        file.write("\n".join(values))
+        file.write(", ".join(values))
 
     # End of program
     pass

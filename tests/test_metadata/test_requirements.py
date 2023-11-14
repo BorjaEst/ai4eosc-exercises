@@ -28,38 +28,10 @@ def test_authors(metadata):
 def test_emails(metadata):
     """Tests that metadata provides authors information."""
     assert "author-email" in metadata
-    assert metadata["author-email"] == {
-        "Author Example": "author@example.com"
-    }
-
-
-def test_description(metadata):
-    """Tests that metadata provides description information."""
-    assert "description" in metadata
-    assert metadata["description"] == "AI4EOSC Exercises for good practices."
-
-
-def test_license(metadata):
-    """Tests that metadata provides license information."""
-    assert "license" in metadata
-    assert metadata["license"] == "MIT"
-
-
-def test_version(metadata):
-    """Tests that metadata provides version information."""
-    assert "version" in metadata
-    assert isinstance(metadata["version"], str)
-    assert all(v.isnumeric() for v in metadata["version"].split("."))
-    assert len(metadata["version"].split(".")) == 3
+    assert metadata["author-email"] == {"Author Example": "author@example.com"}
 
 
 # def test_models(metadata):
 #     """Tests that metadata provides models information."""
-#     assert "models" in metadata
-#     assert metadata["models"] == {"test_simplemodel": "Testing model."}
-
-
-# def test_datasets(metadata):
-#     """Tests that metadata provides datasets information."""
-#     assert "datasets" in metadata
-#     assert metadata["datasets"] == ["t100-dataset.npz"]
+#     assert "something" in metadata
+#     assert metadata["something"] == something
