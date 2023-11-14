@@ -46,6 +46,11 @@ def _run_command(output, **options):
 
 # Main call ---------------------------------------------------------
 if __name__ == "__main__":
-    args = parser.parse_args()
-    _run_command(**vars(args))
-    sys.exit(0)  # Shell return 0 == success
+    try:
+        args = parser.parse_args()
+        _run_command(**vars(args))
+    except TypeError as err:
+        sys.exit(1)
+    except Exception as err:
+        sys.exit(1)
+    sys.exit(0)
