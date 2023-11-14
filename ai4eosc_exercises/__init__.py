@@ -19,19 +19,21 @@ logger.setLevel(config.LOG_LEVEL)
 
 
 def warm(**kwargs):
-    """Main/public method to start up the model
-    """
+    """Main/public method to start up the model"""
     pass
 
 
 def predict(model_name, input_file, **options):
-    """Main/public method to perform prediction
-    """
-    predict_result = [x for x in range(100)]
+    """Main/public method to perform prediction"""
+    if input_file is None:
+        predict_result = [x for x in range(100)]
+    else:
+        data = open(input_file, "r").readlines()
+        predict_result = [[int(y) for y in x.split(",")] for x in data]
     return predict_result
 
+
 def train(model_name, input_file, **options):
-    """Main/public method to perform training
-    """
-    train_result = {'result': 'not implemented'}
+    """Main/public method to perform training"""
+    train_result = {"result": "not implemented"}
     return train_result

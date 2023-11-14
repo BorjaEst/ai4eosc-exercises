@@ -21,7 +21,7 @@ the same folder. However, remember to add the prefix `test_` to the file.
 
 def test_predictions_type(predictions):
     """Tests that predictions is dict type."""
-    assert isinstance(predictions, dict)
+    assert isinstance(predictions, list)
 
 
 # Example to test predictions probabilities output shapes
