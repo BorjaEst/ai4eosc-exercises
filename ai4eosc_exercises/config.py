@@ -34,3 +34,4 @@ LOG_LEVEL = getattr(logging, ENV_LOG_LEVEL.upper())
 
 # EXAMPLE on how to load environment variables
 PARAMETER_INT = int(os.getenv("AI4EOSC_EXERCISES_PARAMETER_INT", default="10"))
+DATA_SIZE = int(os.getenv("AI4EOSC_EXERCISES_DATA_SIZE", default="10"))
