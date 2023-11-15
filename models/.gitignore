@@ -2,3 +2,5 @@
 *
 # Except this file
 !.gitignore
+!my_model
+!my_model/model_parameters.yml
